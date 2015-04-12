@@ -4,8 +4,10 @@ human_url: 'Example.com'
 name: 'Example Site'
 description: 'Example site description'
 title: 'Example site title'
+
 # Optional
-logo: 'example-logo-big.png'
-image: 'http://www.examplecdn.com/example-logo-large.png'
+logo_image_name: 'example-logo-big.png'
+logo_image_path: 'http://www.examplecdn.com/example-logo-large.png'
 twitter_handle: '@Example'
+# facebook_app_id: ''
 

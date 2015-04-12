@@ -1,0 +1,14 @@
+doctype 5
+html
+  head
+    title = page_title
+    meta name='description' content = page_description
+  body
+    - root_url = data.site.home_url
+    ul
+      - sitemap.resources.each do |page|
+        - if page.path =~ /\.html/ && page.path != 'sitemap.html'
+          li
+            a href = page.url
+              = page.data.title || page_title
+

@@ -29,12 +29,17 @@ require 'helpers/custom_template_helpers'
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
-###
-# Helpers
-###
+page 'sitemap.html', layout: false
+page 'sitemap.xml', layout: false
+page 'feed.xml', layout: false
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+
+###
+# Helpers
+###
+helpers CustomTemplateHelpers
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -67,4 +72,3 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
-helpers CustomTemplateHelpers
