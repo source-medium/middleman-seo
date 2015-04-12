@@ -4,14 +4,16 @@ source 'https://rubygems.org'
 
 ruby '2.2.0'
 
-gem 'middleman', '~>3.3.10'
+gem 'dotenv'
 
-# Live-reloading plugin
+gem 'middleman', '~>3.3.10'
+# gem 'middleman-blog'
 gem 'middleman-livereload', '~> 3.1.0'
+
 gem 'rake'
+gem 'builder' # XML Builder
 gem 'slim'
 gem 'bourbon'
-gem 'neat'
 
 ### Debugging
 gem 'pry'
