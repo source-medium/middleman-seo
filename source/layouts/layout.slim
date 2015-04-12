@@ -30,8 +30,6 @@ html itemscope='' itemtype='http://schema.org/WebPage'
 
     // Mobile Specific Metas
     meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'
-    // FONT
-    link href='http://fonts.googleapis.com/css?family=Lato:300,700,300italic' rel='stylesheet' type='text/css'
 
     = stylesheet_link_tag 'all'
     = javascript_include_tag 'all'
@@ -40,3 +38,6 @@ html itemscope='' itemtype='http://schema.org/WebPage'
 
   body class=page_classes
     = yield
+
+    / Footer
+    = link_to 'Sitemap', 'sitemap'
