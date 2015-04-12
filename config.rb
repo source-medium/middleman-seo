@@ -1,4 +1,3 @@
-require 'helpers/custom_template_helpers'
 ###
 # Compass
 ###
@@ -38,8 +37,8 @@ page 'feed.xml', layout: false
 
 ###
 # Helpers
+# Built in custom helpers live in /helpers/custom_template_helpers.rb
 ###
-helpers CustomTemplateHelpers
 
 # Reload the browser automatically whenever files change
 configure :development do
