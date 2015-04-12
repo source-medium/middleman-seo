@@ -1,3 +1,4 @@
+require 'helpers/custom_template_helpers'
 ###
 # Compass
 ###
@@ -36,33 +37,28 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+activate :directory_indexes
+
+# Add bower's directory to sprockets asset path
+after_configuration do
+  @bower_config = JSON.parse IO.read("#{root}/.bowerrc")
+  sprockets.append_path File.join "#{root}", @bower_config["directory"]
+end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
-
-  # Enable cache buster
-  # activate :asset_hash
+  activate :minify_css
+  activate :minify_javascript
+  activate :asset_hash
 
   # Use relative URLs
   # activate :relative_assets
@@ -70,3 +66,5 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+helpers CustomTemplateHelpers
