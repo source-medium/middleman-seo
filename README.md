@@ -2,21 +2,21 @@
 A SEO-optimized project template for [Middleman](http://middlemanapp.com), the amazing static site building tool.
 
 ## Design goals
-- Simple.
-- Grokkable.
-- Out of the box search engine and social media optimized.
+- Simple
+- Grokkable
+- Out of the box search engine and social media optimizations
 
 ## Features
 __SEO Features__
-- Comprehensive [meta tags](secretsaucehq.com/blog/social-media/the-ultimate-guide-to-social-media-meta-tags/) for search engines and social media platforms.
-- Easily manage critical site-wide information in `data/site.yml`.
-- Customizable page-level title, description, and image via [Frontmatter](https://middlemanapp.com/basics/frontmatter/).
-- Sitemaps generated in both `HTML` and `XML`.
-- Accurate social share URL template helpers.
-- Customizable `robots.txt` generation via [middleman-robots](http://github.com/yterajima/middleman-robots).
+- Comprehensive [meta tags](secretsaucehq.com/blog/social-media/the-ultimate-guide-to-social-media-meta-tags/) for search engines and social media platforms
+- Easily manage critical site-wide information in `data/site.yml`
+- Customizable page-level title, description, and image via [Frontmatter](https://middlemanapp.com/basics/frontmatter/)
+- Sitemaps generated in both `HTML` and `XML`
+- Accurate social share URL template helpers
+- Customizable `robots.txt` generation via [middleman-robots](http://github.com/yterajima/middleman-robots)
 
 __Other Features__
-- Optionally manage frontend dependencies via [Bower](http://bower.io).
+- Optionally manage frontend dependencies via [Bower](http://bower.io)
 
 ## Dependencies
 
