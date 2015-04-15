@@ -8,7 +8,7 @@ A SEO-optimized project template for [Middleman](http://middlemanapp.com), the a
 
 ## Features
 __SEO Features__
-- Comprehensive [meta tags](secretsaucehq.com/blog/social-media/the-ultimate-guide-to-social-media-meta-tags/) for search engines and social media platforms
+- Comprehensive [meta tags](http://secretsaucehq.com/blog/social-media/the-ultimate-guide-to-social-media-meta-tags/) for search engines and social media platforms
 - Easily manage critical site-wide information in `data/site.yml`
 - Customizable page-level title, description, and image via [Frontmatter](https://middlemanapp.com/basics/frontmatter/)
 - Sitemaps generated in both `HTML` and `XML`
