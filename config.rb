@@ -65,15 +65,16 @@ configure :build do
   activate :asset_hash
   activate :smusher
 
-  # github.com/yterajima/middleman-robots
-  activate :robots, rules: [
-    { user_agent: '*', allow: ['/'] }
-  ],
-  sitemap: "#{data.site.url}/sitemap.xml"
-
   # Use relative URLs
   # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  # github.com/yterajima/middleman-robots
+  # Make sure this stays on the bottom
+  activate :robots, rules: [
+    { user_agent: '*', allow: ['/'] }
+  ],
+  sitemap: "#{data.site.url}/sitemap.xml"
 end
