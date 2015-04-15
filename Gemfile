@@ -13,6 +13,9 @@ gem 'middleman-livereload', '~> 3.1.0'
 # https://github.com/grosser/smusher
 gem 'middleman-smusher'
 
+# Generates robots.txt
+gem 'middleman-robots'
+
 gem 'rake'
 gem 'builder' # XML Builder
 gem 'slim'

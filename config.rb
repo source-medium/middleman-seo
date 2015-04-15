@@ -65,6 +65,12 @@ configure :build do
   activate :asset_hash
   activate :smusher
 
+  # github.com/yterajima/middleman-robots
+  activate :robots, rules: [
+    { user_agent: '*', allow: ['/'] }
+  ],
+  sitemap: "#{data.site.url}/sitemap.xml"
+
   # Use relative URLs
   # activate :relative_assets
 
