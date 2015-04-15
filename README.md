@@ -13,6 +13,7 @@ __SEO Features__
 - Customizable page-level title, description, and image via [Frontmatter](https://middlemanapp.com/basics/frontmatter/).
 - Sitemaps generated in both `HTML` and `XML`.
 - Accurate social share URL template helpers.
+- Customizable `robots.txt` generation via [middleman-robots](http://github.com/yterajima/middleman-robots).
 
 __Other Features__
 - Optionally manage frontend dependencies via [Bower](http://bower.io).
