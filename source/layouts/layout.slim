@@ -31,6 +31,10 @@ html itemscope='' itemtype='http://schema.org/WebPage'
     // Mobile Specific Metas
     meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'
 
+    // Preferred URL (rel="canonical")
+    - if current_page.data.preferred_url
+      link rel='canonical' href=current_page.data.preferred_url
+
     = stylesheet_link_tag 'all'
     = javascript_include_tag 'all'
     = favicon_tag 'images/favicon.ico'
