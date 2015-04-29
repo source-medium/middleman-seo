@@ -14,7 +14,7 @@ __SEO Features__
 - Sitemaps generated in both `HTML` and `XML`
 - Accurate social share URL template helpers
 - Customizable `robots.txt` generation via [middleman-robots](http://github.com/yterajima/middleman-robots)
-- Preferred URL (rel="canonical") for any page by setting the `preferred_url` key in the page's frontmatter
+- Preferred URL (`rel="canonical"`) for any page by setting the `preferred_url` key in the page's frontmatter
   - Example: `preferred_url: http://medium.com/article-name` will produce `<link href="http://medium.com/article-name" rel="canonical">`
 
 __Other Features__
