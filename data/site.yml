@@ -1,4 +1,5 @@
 # Required
+language: 'en-us'
 url: 'http://www.example.com'
 human_url: 'Example.com'
 name: 'Example Site'
