@@ -20,6 +20,7 @@ gem 'rake'
 gem 'builder' # XML Builder
 gem 'slim'
 gem 'bourbon'
+gem 'middleman-autoprefixer'
 
 ### Debugging
 gem 'pry'

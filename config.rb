@@ -45,8 +45,6 @@ configure :development do
   activate :livereload
 end
 
-activate :directory_indexes
-
 # Add bower's directory to sprockets asset path
 after_configuration do
   @bower_config = JSON.parse IO.read("#{root}/.bowerrc")
@@ -56,6 +54,9 @@ end
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+
+activate :autoprefixer
+activate :directory_indexes
 
 # Build-specific configuration
 configure :build do
