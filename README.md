@@ -1,6 +1,8 @@
 # middleman-seo
 A SEO-optimized project template for [Middleman](http://middlemanapp.com), the amazing static site building tool.
 
+Confused about what it means to SEO-optimize your site from a technical perspective? [Read this](secretsaucehq.com/blog/seo/the-technical-seo-and-social-media-optimization-checklist/).
+
 ## Design goals
 - Simple
 - Grokkable
