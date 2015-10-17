@@ -40,6 +40,10 @@ Now you can simply init new projects with the "seo" template:
 
 `middleman init my-project --template=seo `
 
+This template uses [Bower](http://bower.io/) to manage JavaScript and CSS packages. Install these before Middleman can build your site:
+
+`bower install`
+
 Just don't forget to update `~/.middleman/seo` every now and then.
 
 ## TODO's
