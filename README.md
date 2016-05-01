@@ -3,6 +3,8 @@ A SEO-optimized project template for [Middleman](http://middlemanapp.com), the a
 
 Confused about what it means to SEO-optimize your site from a technical perspective? [Read this](http://secretsaucehq.com/blog/seo/the-technical-seo-and-social-media-optimization-checklist/).
 
+Looking for a Middleman 4 template with external asset pipeline? Check out [this branch](https://github.com/secretsaucehq/middleman-seo/tree/upgrade-middleman4-gulp-pipeline)
+
 ## Design goals
 - Simple
 - Grokkable
