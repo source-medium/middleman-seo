@@ -35,8 +35,8 @@ html itemscope='' itemtype='http://schema.org/WebPage' lang=data.site.language
     - if current_page.data.preferred_url
       link rel='canonical' href=current_page.data.preferred_url
 
-    = stylesheet_link_tag 'all'
-    = javascript_include_tag 'all'
+    = stylesheet_link_tag :site
+    = javascript_include_tag :site
     = favicon_tag 'images/favicon.ico'
     = favicon_tag 'images/favicon.ico', rel: 'apple-touch-icon', type: 'image/png'
 

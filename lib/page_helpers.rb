@@ -1,5 +1,5 @@
 # Methods defined in the helpers block are available in templates
-module CustomTemplateHelpers
+module PageHelpers
   def page_title
     current_page.data.title || data.site.title
   end
@@ -54,3 +54,4 @@ module CustomTemplateHelpers
                                           "&source=#{data.site.url}"
   end
 end
+

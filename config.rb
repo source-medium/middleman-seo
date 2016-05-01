@@ -1,81 +1,77 @@
-###
-# Compass
-###
+require 'lib/page_helpers'
+helpers PageHelpers
 
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
+page '/sitemap.html', layout: false
 
-###
-# Page options, layouts, aliases and proxies
-###
-
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+# page "/path/to/file.html", layout: :otherlayout
 
-# Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
-
-page 'sitemap.html', layout: false
-page 'sitemap.xml', layout: false
-page 'feed.xml', layout: false
-
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
+# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
+#  which_fake_page: "Rendering a fake page with a local variable" }
 
 ###
 # Helpers
-# Built in custom helpers live in /helpers/custom_template_helpers.rb
 ###
 
-# Reload the browser automatically whenever files change
+# activate :blog do |blog|
+#   # This will add a prefix to all links, template references and source paths
+#   blog.name = 'blog'
+#   # blog.prefix = 'blog'
+
+#   blog.permalink = '{title}.html'
+#   blog.sources = 'articles/{year}-{month}-{day}-{title}.html'
+#   blog.default_extension = ".md"
+
+#   blog.tag_template = "tag.html"
+
+#   blog.paginate = true
+#   blog.per_page = 10
+#   blog.page_link = 'page/{num}'
+
+#   # blog.taglink = "tags/{tag}.html"
+#   # blog.layout = "layout"
+#   # blog.summary_separator = /(READMORE)/
+#   # blog.summary_length = 250
+# end
+
+
 configure :development do
   activate :livereload
 end
 
-# Add bower's directory to sprockets asset path
-after_configuration do
-  @bower_config = JSON.parse IO.read("#{root}/.bowerrc")
-  sprockets.append_path File.join "#{root}", @bower_config["directory"]
-end
+ignore "*.sass"
 
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
+activate :external_pipeline,
+  name: :gulp,
+  command: build? ? './node_modules/gulp/bin/gulp.js default' : './node_modules/gulp/bin/gulp.js watch',
+  source: "./gulp_dist",
+  latency: 1
 
-activate :autoprefixer
+set :relative_links, true
 activate :directory_indexes
+
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true
+
+set :js_dir, 'assets/javascripts'
+set :css_dir, 'assets/stylesheets'
+set :images_dir, 'assets/images'
+set :fonts_dir, 'assets/fonts'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  activate :minify_css
-  activate :minify_javascript
   activate :asset_hash
-  activate :smusher
+  # Minify CSS on build
+  # activate :minify_css
 
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
-
-  # github.com/yterajima/middleman-robots
-  # Make sure this stays on the bottom
+  # Minify Javascript on build
+  # activate :minify_javascript
   activate :robots, rules: [
-    { user_agent: '*', allow: ['/'] }
+    { user_agent: '*', allow: ['/']  }
   ],
   sitemap: "#{data.site.url}/sitemap.xml"
 end
